@@ -3,7 +3,7 @@ Magento-URLs
 
 A Resource Of Magento URL's
 
-
+```php
 Mage::getBaseUrl() => Gets base url path e.g. http://my.website.com/
 
 Mage::getBaseUrl(‘media’) => Gets MEDIA folder path e.g. http://my.website.com/media/
@@ -61,3 +61,4 @@ session Mage::getBaseDir(‘session’) /var/www/magento/var/session
 upload Mage::getBaseDir(‘upload’) /var/www/magento/media/upload
 
 export Mage::getBaseDir(‘export’) /var/www/magento/var/export
+```
