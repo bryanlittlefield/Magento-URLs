@@ -4,6 +4,54 @@ Magento-URLs
 A Resource Of Magento URL's
 
 ```php
+
+To Retrieve URL path in STATIC BLOCK
+---------------------------------------
+To get SKIN URL
+{{skin url='images/sampleimage.jpg'}}
+ 
+To get Media URL
+{{media url='/sampleimage.jpg'}}
+ 
+To get Store URL
+{{store url='mypage.html'}}
+ 
+To get Base URL
+{{base url='yourstore/mypage.html'}}
+ 
+ 
+TO Retrieve URL path in PHTML
+---------------------------------------
+ 
+Not secure Skin URL:
+<?php echo $this->getSkinUrl('images/sampleimage.jpg') ?>
+ 
+Secure Skin URL
+<?php echo $this->getSkinUrl('images/ sampleimage.gif', array('_secure'=>true)) ?>
+ 
+Get  Current URL
+$current_url = Mage::helper('core/url')->getCurrentUrl();
+ 
+Get Home URL
+$home_url = Mage::helper('core/url')->getHomeUrl();
+ 
+Get Magento Media Url
+Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_LINK);
+ 
+Get Magento Media Url
+Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_MEDIA);
+ 
+Get Magento Skin Url
+Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_SKIN);
+ 
+Get Magento Store Url
+Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_WEB);
+ 
+Get Magento Js Url
+Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_JS);
+
+
+
 Mage::getBaseUrl() => Gets base url path e.g. http://my.website.com/
 
 Mage::getBaseUrl('media') => Gets MEDIA folder path e.g. http://my.website.com/media/
